@@ -26,10 +26,8 @@ def post_detail(request, pk):
 
 def post_add(request):
     form = PostCreateForm()
-    #form 태그 전달받을때 기본적으로 GET으로 받는게 맞나요?
-    #
+
     if request.method == 'GET':
-        print("Get run...")
         context = {
             'form': form
         }

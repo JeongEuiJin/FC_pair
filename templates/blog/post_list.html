@@ -5,7 +5,7 @@
     <a href="{% url 'post_add'%}">ADD POST</a>
     {% for post in posts %}
     <div>
-        <p><a href="{% url 'post_detail' pk=post.id %}">{{post.title}} </a></p>
+        <p><a href="{% url 'post_detail' pk=post.id %}" methods="POST">{{post.title}} </a></p>
         <p class="text-right">Created date : {{post.created_date}}</p>
     </div>
     {% endfor %}
