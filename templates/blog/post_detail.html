@@ -1,0 +1,15 @@
+{% extends 'blog/base.html'%}
+
+{% block content%}
+
+
+    <div>
+        <p><a href="">제목 {{posts.title}} </a></p>
+        <p>내용{{posts.text|linebreaksbr}}</p>
+        <p>날짜{{posts.created_date}}</p>
+        <a href="{%url 'post_list'%}" class="btn btn-primary pull-right">뒤로가기</a>
+    </div>
+
+
+
+{% endblock%}
