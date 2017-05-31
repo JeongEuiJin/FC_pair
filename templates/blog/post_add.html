@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<form action="{% url 'post_add' %}" method="`">
+    {% csrf_token %}
+    {{ form.title }}
+    {{ form.text }}
+    <button type="submit">추가작성</button>
+</form>
+
+
+{% endblock %}
